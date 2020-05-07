@@ -101,6 +101,8 @@ def csv_to_pickle(mainfilename,metadatafilename):
     df=pd.read_csv(fr"{data_location}\{mainfilename}.csv")
     pbar.update(100/32)
     df_metadata=pd.read_csv(fr"{data_location}\{metadatafilename}.csv")
+    if 'Unnamed: 0' in df_metadata.columns:
+        df_metadata=df_metadata.drop('Unnamed: 0',1)
     pbar.update(100/32)
     #Normalisation
     #Step1:
