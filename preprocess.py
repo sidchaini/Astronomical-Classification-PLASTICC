@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[65]:
-
-
 import pandas as pd
 import numpy as np
 from time import process_time 
@@ -12,12 +6,8 @@ import random
 from pathlib import Path
 import os
 import sys
-#from tqdm import tqdm
-from tqdm.notebook import tqdm
-
-
-# In[66]:
-
+from tqdm import tqdm
+# from tqdm.notebook import tqdm
 
 def query_yes_no(question, default="yes"):
     """Ask a yes/no question via raw_input() and return their answer.
@@ -52,9 +42,6 @@ def query_yes_no(question, default="yes"):
         else:
             sys.stdout.write("Please respond with 'yes' or 'no' "
                              "(or 'y' or 'n').\n")
-
-
-# In[67]:
 
 
 def get_input_directory():
@@ -100,13 +87,6 @@ def return_pickle_location():
         pickle_location=get_pickle_directory()
     print(f"Pickle Location = {pickle_location}")
     return pickle_location
-
-data_location=return_data_location()
-pickle_location=return_pickle_location()
-
-
-# In[73]:
-
 
 def csv_to_pickle(mainfilename,metadatafilename):
     mainfilename=mainfilename.split(".csv")[0]
@@ -312,20 +292,10 @@ def csv_to_pickle(mainfilename,metadatafilename):
     print(f"Preprocessing took {t2-t1} seconds.")
 
 
-# In[74]:
+data_location=return_data_location()
+pickle_location=return_pickle_location()
 
-
-csv_to_pickle("training_set","training_set_metadata")
-
-
-# In[75]:
-
-
-csv_to_pickle("test_set_sample","test_set_sample_metadata")
-
-
-# In[ ]:
-
-
-
-
+if __name__ == "__main__":
+	n1=input("Enter main file name e.g: training_set")
+	n2=input("Enter metadata file name e.g: training_set_metadata")
+	csv_to_pickle(n1,n2)
