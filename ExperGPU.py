@@ -22,8 +22,8 @@ import tensorflow as tf
 from tensorflow.keras.preprocessing import sequence
 from tensorflow.compat.v1 import InteractiveSession
 config = tf.compat.v1.ConfigProto()
-config.gpu_options.per_process_gpu_memory_fraction = 0.9
-#config.gpu_options.allow_growth = True
+#config.gpu_options.per_process_gpu_memory_fraction = 0.9
+config.gpu_options.allow_growth = True
 session = InteractiveSession(config=config)
 # fix random seed for reproducibility
 np.random.seed(21)
@@ -337,7 +337,7 @@ def save_pickles():
         
 errorlog=[]
 
-for i in range(100):
+for i in range(2):
     print(f"Iteration {i+1}")
     try:
         build_model()
@@ -356,5 +356,5 @@ for i in range(100):
 
 print(str(errorlog))
 print("Done")
-
-os.system('cmd /k "psshutdown -d -t 0"') 
+#for %i IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50) DO python ExperGPU.py
+# os.system('cmd /k "psshutdown -d -t 0"') 
