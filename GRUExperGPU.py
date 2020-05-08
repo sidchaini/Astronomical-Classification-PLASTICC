@@ -150,7 +150,7 @@ def save_pickles():
     assert len(done_features)==len(result_per_model) and len(done_features)>=oglen
     with open(r"C:\Users\sidch\Desktop\exp2_done_features_pickle", "wb") as fp:   #Pickling
         pickle.dump(done_features, fp)
-    with open(r"C:\Users\sidch\Desktop\exp2_done_features_pickle", "wb") as fp:   #Pickling
+    with open(r"C:\Users\sidch\Desktop\exp2_result_per_model_pickle", "wb") as fp:   #Pickling
         pickle.dump(result_per_model, fp)
         
 errorlog=[]
