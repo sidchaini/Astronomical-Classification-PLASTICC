@@ -186,7 +186,11 @@ def csv_to_pickle(mainfilename,metadatafilename):
         90: 11,
         92: 12,
         95: 13,
-        99: 14
+        99: 14,
+        991: 14,
+        992: 14,
+        993: 14,
+        994:14
     }
     df2d["target_class"]=df2d.loc[:,["target"]].replace(target_dict)
 
