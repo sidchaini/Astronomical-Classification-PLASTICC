@@ -306,6 +306,7 @@ def csv_to_pickle(mainfilename,metadatafilename):
     pbar.update(1)
     df2d = df2d.fillna(0)
     df2d.drop("target_class",axis=1,inplace=True)
+    df2d.drop("target",axis=1,inplace=True)
     twod_data = df2d.reset_index().to_numpy()[:,1:]
     pbar.update(1)
     with open(fr"{pickle_location}\{mainfilename}_3d_pickle", "wb") as fp:   #Pickling
