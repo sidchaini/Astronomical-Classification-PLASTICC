@@ -12,7 +12,7 @@ def multiclass_roc_auc_score(y_test, y_pred, average="macro"):
     return roc_auc_score(y_test, y_pred, average=average)
 
 
-df=pd.read_csv("final_submission")
+df=pd.read_csv("final_submission.csv")
 
 y_preds = df.drop("object_id",1).to_numpy().argmax(axis=1)
 y_preds_2 = df.drop("object_id",1).to_numpy()
