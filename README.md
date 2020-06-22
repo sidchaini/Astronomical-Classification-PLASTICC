@@ -26,7 +26,7 @@ Astronomical-Classification-PLASTICC
 </pre>
 
 ## Order of running
-Run the py file in the order: 
+Run the py files in the order: 
 ```
 preprocessing.py
 cross_val_2dsubm.py	
