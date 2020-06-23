@@ -1,6 +1,7 @@
 # Astronomical Classiﬁcation of Light Curves with an Ensemble of Gated Recurrent Units
 
 [![arXiv](https://img.shields.io/badge/arxiv-astro--ph%2F2006.12333-red)](https://arxiv.org/abs/2006.12333) 
+[![MIT](https://img.shields.io/github/license/aknightwing/Astronomical-Classification-PLASTICC)](https://choosealicense.com/licenses/mit) 
 
 
 ## Abstract
@@ -41,10 +42,6 @@ evaluate.py
 
 ## Github Link
 https://github.com/AKnightWing/Astronomical-Classification-PLASTICC
-
-## License
-[![MIT](https://img.shields.io/github/license/aknightwing/Astronomical-Classification-PLASTICC)](https://choosealicense.com/licenses/mit) 
-
 
 ## Authors
 Siddharth Chaini, Soumya Sanjay Kumar
