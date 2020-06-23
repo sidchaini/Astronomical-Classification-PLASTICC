@@ -43,7 +43,8 @@ evaluate.py
 https://github.com/AKnightWing/Astronomical-Classification-PLASTICC
 
 ## License
-[MIT](https://choosealicense.com/licenses/mit/)
+[![MIT](https://img.shields.io/github/license/aknightwing/Astronomical-Classification-PLASTICC](https://choosealicense.com/licenses/mit/)
+
 
 ## Authors
 Siddharth Chaini, Soumya Sanjay Kumar
