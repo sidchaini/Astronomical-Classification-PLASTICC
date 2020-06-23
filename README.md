@@ -5,7 +5,8 @@ With an ever-increasing amount of astronomical data being collected, manual clas
 This project is part of a submission for the course DSE 301: AI, IISER Bhopal, Fall 2020.
 
 ## Project Report
-[Link](https://github.com/AKnightWing/Astronomical-Classification-PLASTICC/blob/master/Astronomical%20Classification%20Report.pdf)
+[![arXiv](https://img.shields.io/badge/arxiv-astro--ph%2F2006.12333-red)](https://arxiv.org/abs/2006.12333) 
+
 
 ## Prerequisites
 
