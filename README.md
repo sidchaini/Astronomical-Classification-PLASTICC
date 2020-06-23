@@ -3,8 +3,6 @@
 With an ever-increasing amount of astronomical data being collected, manual classiﬁcation has become obsolete; and machine learning is the only way forward. Keeping this in mind, the Large Synoptic Survey Telescope (LSST) Team hosted the Photometric LSST Astronomical Time-Series Classiﬁcation Challenge (PLAsTiCC) in 2018. The aim of this challenge was to develop ML models that accurately classify astronomical sources into diﬀerent classes, scaling from a limited training set to a large test set. In this text, we report our results of experimenting with Bidirectional Gated Recurrent Unit (GRU) based models to deal with time series data of the PLAsTiCC data. We demonstrate that GRUs are indeed suitable to handle time series data. With minimum preprocessing and without augmentation, our stacked ensemble of GRU and Dense networks achieves an accuracy of 76.243%. Data from astronomical surveys such as LSST will help researchers answer questions pertaining to dark matter, dark energy and the origins of the universe; accurate classiﬁcation of astronomical sources is the ﬁrst step towards achieving this.
 
 This project is part of a submission for the course DSE 301: AI, IISER Bhopal, Fall 2020.
-
-## Accompanying Preprint
 [![arXiv](https://img.shields.io/badge/arxiv-astro--ph%2F2006.12333-red)](https://arxiv.org/abs/2006.12333) 
 
 
