@@ -43,7 +43,7 @@ evaluate.py
 https://github.com/AKnightWing/Astronomical-Classification-PLASTICC
 
 ## License
-[![MIT](https://img.shields.io/github/license/aknightwing/Astronomical-Classification-PLASTICC](https://choosealicense.com/licenses/mit/)_
+[![MIT](https://img.shields.io/github/license/aknightwing/Astronomical-Classification-PLASTICC)](https://arxiv.org/abs/2006.12333) 
 
 
 ## Authors
