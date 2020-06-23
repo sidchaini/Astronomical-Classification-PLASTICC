@@ -3,9 +3,8 @@
 [![arXiv](https://img.shields.io/badge/arxiv-astro--ph%2F2006.12333-red)](https://arxiv.org/abs/2006.12333) 
 [![MIT](https://img.shields.io/github/license/aknightwing/Astronomical-Classification-PLASTICC)](https://choosealicense.com/licenses/mit) 
 
-[![GitHub](https://img.shields.io/badge/GitHub--black?logo=github&style=social))](https://github.com/AKnightWing/Astronomical-Classification-PLASTICC) 
+[![GitHub](https://img.shields.io/badge/GitHub--black?logo=github&style=social)](https://github.com/AKnightWing/Astronomical-Classification-PLASTICC) 
 
-[![GitHub](https://img.shields.io/badge/GitHub--black?logo=github&style=social)] (https://github.com/AKnightWing/Astronomical-Classification-PLASTICC)
 
 
 ## Abstract
