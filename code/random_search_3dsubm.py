@@ -1,6 +1,6 @@
 '''
 Note: We performed quite a lot of random searches using Keras-Tuner, and have not included all of them.
-This py file is the one which generated the best result for 2dsubm models.
+This py file is the one which generated the best result for 3dsubm models.
 '''
 from scsskutils import *
 import os
