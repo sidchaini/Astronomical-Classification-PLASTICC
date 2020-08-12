@@ -28,9 +28,9 @@ def csv_to_pickle(mainfilename,metadatafilename):
     t1=process_time()
     pbar = tqdm(total=30)
 
-    df=pd.read_csv(os.path.join(data_location,f"{mainfilename}.csv")
+    df=pd.read_csv(os.path.join(data_location,f"{mainfilename}.csv"))
     pbar.update(1)
-    df2d=pd.read_csv(os.path.join(data_location,f"{metadatafilename}.csv")
+    df2d=pd.read_csv(os.path.join(data_location,f"{metadatafilename}.csv"))
 
     pbar.update(1)
     current_objs = np.unique(df.object_id.values)
