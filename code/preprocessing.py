@@ -237,7 +237,7 @@ def csv_to_pickle(mainfilename,metadatafilename):
     twod_data = ss.fit_transform(np.nan_to_num(full_train_new))
     del(full_train_new)
 
-    with open(os.path.join(pickle_location,"{mainfilename}_2d_pickle"), "wb") as fp:   #Pickling
+    with open(os.path.join(pickle_location,f"{mainfilename}_2d_pickle"), "wb") as fp:   #Pickling
         pickle.dump(twod_data, fp)
     pbar.update(1)
 
@@ -355,10 +355,10 @@ def csv_to_pickle(mainfilename,metadatafilename):
     list_of_data_arrays.append(dfarray[obj_change_index[-1]:,1:])
     pbar.update(1)
     pbar.update(1)
-    with open(os.path.join(pickle_location,"{mainfilename}_3d_pickle"), "wb") as fp:   #Pickling
+    with open(os.path.join(pickle_location,f"{mainfilename}_3d_pickle"), "wb") as fp:   #Pickling
         pickle.dump(list_of_data_arrays, fp)
     pbar.update(1)
-    with open(os.path.join(pickle_location,"{mainfilename}_label_pickle"), "wb") as fp:   #Pickling
+    with open(os.path.join(pickle_location,f"{mainfilename}_label_pickle"), "wb") as fp:   #Pickling
         pickle.dump(labels, fp)
     pbar.update(1)
     gc.collect()
