@@ -12,7 +12,7 @@ This project is part of a submission for the course DSE 301: AI, IISER Bhopal, F
 
 ## Prerequisites
 
-Python3+, numpy, pandas, matplotlib, sk-learn, keras, tensorflow 2+ and scikitplot. 
+Python 3.6+, numpy, pandas, matplotlib, sk-learn, keras, tensorflow 2+ and scikitplot. 
 For example, for 3 authors, the directory structure is as follows:
 <pre>
 Astronomical-Classification-PLASTICC
