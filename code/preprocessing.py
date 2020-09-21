@@ -17,11 +17,11 @@ import gc
 def csv_to_pickle(mainfilename,metadatafilename):
     mainfilename=mainfilename.split(".csv")[0]
     metadatafilename=metadatafilename.split(".csv")[0]
-    if (os.path.isfile(fr"{pickle_location}\{mainfilename}_3d_pickle")
-        or os.path.isfile(fr"{pickle_location}\{mainfilename}_2d_pickle")
-        or os.path.isfile(fr"{pickle_location}\{mainfilename}_label_pickle")
+    if (os.path.isfile(os.path.join(pickle_location,f"{mainfilename}_3d_pickle"))
+        or os.path.isfile(os.path.join(pickle_location,f"{mainfilename}_2d_pickle"))
+        or os.path.isfile(os.path.join(pickle_location,f"{mainfilename}_label_pickle"))
        ):
-        boolchoice=query_yes_no(fr"{mainfilename} pickles found! Do you want to rebuild?")
+        boolchoice=query_yes_no(f"{mainfilename} pickles found! Do you want to rebuild?")
         if boolchoice==False:
             return
     print(f"Preprocessing {mainfilename}!")

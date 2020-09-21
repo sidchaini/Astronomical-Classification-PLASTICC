@@ -49,9 +49,9 @@ for i in range(1,12):
     loc_test_3dpickle=os.path.join(pickle_location,f"test_set_batch{i}_3d_pickle")
     loc_test_2dpickle=os.path.join(pickle_location,f"test_set_batch{i}_2d_pickle")
     loc_test_labels = os.path.join(pickle_location,f"test_set_batch{i}_label_pickle")
-    if (os.path.isfile(fr"D:\Endgame SCSSK\Endgame Predictions\preds{i}.csv")
+    if (os.path.isfile(f"preds{i}.csv")
        ):
-        boolchoice=query_yes_no(fr"preds{i}.csv found! Do you want to predict again?")
+        boolchoice=query_yes_no(f"preds{i}.csv found! Do you want to predict again?")
         if boolchoice==False:
             continue
     with open(loc_test_3dpickle, "rb") as fp:   # Unpickling
