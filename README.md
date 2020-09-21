@@ -19,7 +19,6 @@ Astronomical-Classification-PLASTICC
 ├── Astronomical Classification Report.pdf
 ├── README.md	
 ├── LICENSE		
-├── LICENSE		
 ├── OnePageAbstract.pdf		
 └── code/
     ├── *.py
