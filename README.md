@@ -32,14 +32,14 @@ The PLAsTiCC Dataset can be downloaded from [here](https://www.kaggle.com/c/PLAs
 ## Order of running
 Run the py files in the order: 
 ```
-1) preprocessing.py
-2.1) cross_val_2dsubm.py	
-2.2) cross_val_3dsubm.py	
-3.1) random_search_2dsubm.py	
-3.2) random_search_3dsubm.py	
-4) create_ensemble.py	
-5) create_submission.py	
-6) evaluate.py	
+1)      preprocessing.py
+2.1)    cross_val_2dsubm.py	
+2.2)    cross_val_3dsubm.py	
+3.1)    random_search_2dsubm.py	
+3.2)    random_search_3dsubm.py	
+4)      create_ensemble.py	
+5)      create_submission.py	
+6)      evaluate.py	
 ```
 
 ## Authors
