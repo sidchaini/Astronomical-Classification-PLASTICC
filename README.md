@@ -24,7 +24,7 @@ Astronomical-Classification-PLASTICC
     ├── *.py
     ├── *.h5
     ├── *.csv
-    └── .pickles
+    └── *.pickles
 </pre>
 
 The PLAsTiCC Dataset can be downloaded from [here](https://www.kaggle.com/c/PLAsTiCC-2018). It can be stored anywhere on the computer, and the location will be asked in the form of an input when you first run the program.
