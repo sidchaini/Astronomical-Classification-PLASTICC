@@ -383,6 +383,7 @@ def create_unblinded_set():
     print("Extraction complete.")
     df = pd.read_csv(os.path.join(data_location,"test_set_metadata.csv"))
     df = df.merge(true_targetdf, on="object_id")
+    df = df.rename(columns={"true_target": "target"})
     df.to_csv(os.path.join(data_location,"unblinded_test_set_metadata.csv"), index=False)
     print(f"unblinded_test_set_metadata.csv has been saved successfully in {os.path.join(data_location,'unblinded_test_set_metadata.csv')}")
     
