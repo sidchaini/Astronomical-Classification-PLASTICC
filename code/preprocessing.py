@@ -12,6 +12,9 @@ from tqdm import tqdm
 # from tqdm.notebook import tqdm
 from sklearn import preprocessing
 import gc
+import requests
+import gzip
+
 
 
 def csv_to_pickle(mainfilename,metadatafilename):
@@ -366,7 +369,23 @@ def csv_to_pickle(mainfilename,metadatafilename):
     t2=process_time()
     print(f"Preprocessing took {t2-t1} seconds.")
 
-
+def create_unblinded_set():
+    url = "https://zenodo.org/record/2539456/files/plasticc_test_metadata.csv.gz?download=1"
+    print("Downloading file...")
+    r = requests.get(url, allow_redirects=True)
+    open('plasticc_test_metadata.csv.gz', 'wb').write(r.content)
+    print("Download complete.")
+    print("Extracting file...")
+    with gzip.open('./plasticc_test_metadata.csv.gz') as f:
+        somedf = pd.read_csv(f)
+    true_targetdf = somedf[["object_id","true_target"]]
+    del(somedf)
+    print("Extraction complete.")
+    df = pd.read_csv(os.path.join(data_location,"test_set_metadata.csv"))
+    df = df.merge(true_targetdf, on="object_id")
+    df.to_csv(os.path.join(data_location,"unblinded_test_set_metadata.csv"), index=False)
+    print(f"unblinded_test_set_metadata.csv has been saved successfully in {os.path.join(data_location,"unblinded_test_set_metadata.csv")}")
+    
 if __name__ == "__main__":
     n1="training_set"
     n2="training_set_metadata"
@@ -376,4 +395,9 @@ if __name__ == "__main__":
     for i in range(1,12):
         n1=f"test_set_batch{i}"
         n2="unblinded_test_set_metadata"
+        if not os.path.isfile(os.path.join(data_location,f"{n2}.csv")):
+            unblindedchoice=query_yes_no("Preprocessing Test Data will require the true labels. This will require a 157 MB download. Do you want to proceed?")
+            if unblindedchoice:
+                create_unblinded_set()
+        assert os.path.isfile(os.path.join(data_location,f"{n2}.csv"))
         csv_to_pickle(n1,n2)
