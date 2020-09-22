@@ -384,7 +384,7 @@ def create_unblinded_set():
     df = pd.read_csv(os.path.join(data_location,"test_set_metadata.csv"))
     df = df.merge(true_targetdf, on="object_id")
     df.to_csv(os.path.join(data_location,"unblinded_test_set_metadata.csv"), index=False)
-    print(f"unblinded_test_set_metadata.csv has been saved successfully in {os.path.join(data_location,"unblinded_test_set_metadata.csv")}")
+    print(f"unblinded_test_set_metadata.csv has been saved successfully in {os.path.join(data_location,'unblinded_test_set_metadata.csv')}")
     
 if __name__ == "__main__":
     n1="training_set"
