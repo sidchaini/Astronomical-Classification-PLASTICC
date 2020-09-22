@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense, Dropout, Bidirectional, BatchNormalization, Embedding, SimpleRNN, GRU,SpatialDropout1D
 from tensorflow.keras.layers import GlobalMaxPooling1D, Flatten, Masking, GaussianNoise, concatenate, Embedding, TimeDistributed
-from tensorflow.keras.utils import to_categorical,plot_model
+from tensorflow.keras.utils import to_categorical
 from tensorflow.keras.backend import clear_session
 from tensorflow.keras.callbacks import ModelCheckpoint,EarlyStopping
 from tensorflow.keras.optimizers import Adam
@@ -126,7 +126,6 @@ def get_model():
 
     output_layer = Dense(num_classes, activation="softmax") (drop)
     model = Model(inputs=inputs_gru, outputs=output_layer, name="SCSSK_gru_only")
-    plot_model(model, to_file="GRU Submodel.png", show_shapes=True)
     model.compile(loss="categorical_crossentropy",optimizer="adam",metrics=['accuracy'])
     return model
 
