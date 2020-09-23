@@ -45,21 +45,25 @@ Run the py files in the order:
 ## Description of py files
 1) **preprocessing.py**
             This preprocesses the input data as outlined in Section 3.2 of our [report](https://arxiv.org/abs/2006.12333). 
+            
             Input: The light curve data and metadata made available by the PLAsTiCC team on [Kaggle](https://www.kaggle.com/c/PLAsTiCC-2018/data).
+            
             Output: Preprocessed data files stored as pickle files:
                 filename_3d_pickle: for the 3DSubM(3D Sub Model) data.
                 filename_2d_pickle: for the 2DSubM(2D Sub Model) data.
                 filename_label_pickle: for the true classes of each object.
+                
             Note: While not made available originally in the competition, we also make use of the [unblinded PLAsTiCC dataset](https://zenodo.org/record/2539456) to get the true class an object from the test dataset belongs to. This is then used to evaluate our performance in evaluate.py. No other data from unblinded PLAsTiCC dataset is used.
 
 2)
     a) **cross_val_2dsubm.py**
             This calculates the cross-validation accuracy for an elementary 2DSubM densely connected deep network, using the 2D data.
+            
             Input:  The 2DSubM training data pickles created by preprocessing.py
+            
             Output: Prints the cross-validation accuracy for the basic model.
 
     b) **cross_val_3dsubm.py**
-            
             This calculates the cross-validation accuracy for an elementary 3DSubM deep network consisting of Bidirectional GRUs and Dense layers, using the 3D data.
             
             Input:  The 3DSubM training data pickles created by preprocessing.py
@@ -68,7 +72,6 @@ Run the py files in the order:
 
 3)
     a) **random_search_2dsubm.py**
-            
             This does a random search across the hyperparameter space in search of the best hyperparameters as to maximise the validation accuracy of the 2D Sub Model, 2DSubM.
             
             Input:  The 2DSubM training data pickles created by preprocessing.py
@@ -77,12 +80,16 @@ Run the py files in the order:
             
     b) **random_search_3dsubm.py**
             This does a random search across the hyperparameter space in search of the best hyperparameters as to maximise the validation accuracy of the 3D Sub Model, 3DSubM.
+            
             Input:  The 3DSubM training data pickles created by preprocessing.py
+            
             Output: The top 20 3DSubM models from the random search are saved in the form of h5 files.
 
 4) **create_ensemble.py**
             This creates an ensemble of the top 2 2DSubM models and top 2 3DSubM models. This is trained on the validation data.
+            
             Input: The top 2 2DSubM h5, top 2 3DSubM h5 models, the 2DSubM training data pickles and the 3DSubM training data pickles created by preprocessing.py
+            
             Output: Ensemble h5 file
 
 5) **create_submission.py**
@@ -92,7 +99,9 @@ Run the py files in the order:
 
 6) **evaluate.py**
             This evaluates the model against the test data pickles created by preprocessing.py, and calculates evaluation metrics by using the true classes provided in the [unblinded PLAsTiCC dataset](https://zenodo.org/record/2539456).
+            
             Input: The test data pickles created by preprocessing.py
+            
             Output: Prints the accuracy and other evaluation metrics for the ensemble model.
 
 ## Authors
