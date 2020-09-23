@@ -73,22 +73,24 @@ Run the py files in the order:
                 filename_label_pickle: for the true classes of each object.
             Note: While not made available originally in the competition, we also make use of the [unblinded PLAsTiCC dataset](https://zenodo.org/record/2539456) to get the true class an object from the test dataset belongs to. This is then used to evaluate our performance in evaluate.py. No other data from unblinded PLAsTiCC dataset is used.
 
-2.1) **cross_val_2dsubm.py**
+2)
+    a) **cross_val_2dsubm.py**
             This calculates the cross-validation accuracy for an elementary 2DSubM densely connected deep network, using the 2D data.
             Input:  The 2DSubM training data pickles created by preprocessing.py
             Output: Prints the cross-validation accuracy for the basic model.
 
-2.2) **cross_val_3dsubm.py**
+    b) **cross_val_3dsubm.py**
             This calculates the cross-validation accuracy for an elementary 3DSubM deep network consisting of Bidirectional GRUs and Dense layers, using the 3D data.
             Input:  The 3DSubM training data pickles created by preprocessing.py
             Output: Prints the cross-validation accuracy for the basic model.
 
-3.1) **random_search_2dsubm.py**
+3)
+    a) **random_search_2dsubm.py**
             This does a random search across the hyperparameter space in search of the best hyperparameters as to maximise the validation accuracy of the 2D Sub Model, 2DSubM.
             Input:  The 2DSubM training data pickles created by preprocessing.py
             Output: The top 20 2DSubM models from the random search are saved in the form of h5 files.
-
-3.2) **random_search_3dsubm.py**
+            
+    b) **random_search_3dsubm.py**
             This does a random search across the hyperparameter space in search of the best hyperparameters as to maximise the validation accuracy of the 3D Sub Model, 3DSubM.
             Input:  The 3DSubM training data pickles created by preprocessing.py
             Output: The top 20 3DSubM models from the random search are saved in the form of h5 files.
