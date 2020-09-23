@@ -59,14 +59,20 @@ Run the py files in the order:
             Output: Prints the cross-validation accuracy for the basic model.
 
     b) **cross_val_3dsubm.py**
+            
             This calculates the cross-validation accuracy for an elementary 3DSubM deep network consisting of Bidirectional GRUs and Dense layers, using the 3D data.
+            
             Input:  The 3DSubM training data pickles created by preprocessing.py
+            
             Output: Prints the cross-validation accuracy for the basic model.
 
 3)
     a) **random_search_2dsubm.py**
+            
             This does a random search across the hyperparameter space in search of the best hyperparameters as to maximise the validation accuracy of the 2D Sub Model, 2DSubM.
+            
             Input:  The 2DSubM training data pickles created by preprocessing.py
+            
             Output: The top 20 2DSubM models from the random search are saved in the form of h5 files.
             
     b) **random_search_3dsubm.py**
